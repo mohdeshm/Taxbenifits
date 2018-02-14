@@ -1,11 +1,11 @@
 package com.cg.investments.bean;
 
 public class TaxBenifitInvestments {
-	private long houseRentAllowance;
+	private long houseRentPaid;
 	private long medicalInsurance;
 	private long infrastructureBonds;
 	private long sukanyaScheme;
-	private long educationLonaBenifit;
+	private long educationLoanBenifit;
 	private long rajivGandhiEquityScheme;
 	private long interestOnSavingBankAccount;
 
@@ -14,11 +14,11 @@ public class TaxBenifitInvestments {
 	}
 
 	public long getHouseRentAllowance() {
-		return houseRentAllowance;
+		return houseRentPaid;
 	}
 
 	public void setHouseRentAllowance(long houseRentAllowance) {
-		this.houseRentAllowance = houseRentAllowance;
+		this.houseRentPaid = houseRentAllowance;
 	}
 
 	public long getMedicalInsurance() {
@@ -45,12 +45,12 @@ public class TaxBenifitInvestments {
 		this.sukanyaScheme = sukanyaScheme;
 	}
 
-	public long getEducationLonaBenifit() {
-		return educationLonaBenifit;
+	public long geteducationLoanBenifit() {
+		return educationLoanBenifit;
 	}
 
-	public void setEducationLonaBenifit(long educationLonaBenifit) {
-		this.educationLonaBenifit = educationLonaBenifit;
+	public void seteducationLoanBenifit(long educationLoanBenifit) {
+		this.educationLoanBenifit = educationLoanBenifit;
 	}
 
 	public long getRajivGandhiEquityScheme() {
@@ -71,9 +71,9 @@ public class TaxBenifitInvestments {
 
 	@Override
 	public String toString() {
-		return "TaxBenifitInvestments [houseRentAllowance=" + houseRentAllowance + ", medicalInsurance="
+		return "TaxBenifitInvestments [houseRentAllowance=" + houseRentPaid + ", medicalInsurance="
 				+ medicalInsurance + ", infrastructureBonds=" + infrastructureBonds + ", sukanyaScheme=" + sukanyaScheme
-				+ ", educationLonaBenifit=" + educationLonaBenifit + ", rajivGandhiEquityScheme="
+				+ ", educationLoanBenifit=" + educationLoanBenifit + ", rajivGandhiEquityScheme="
 				+ rajivGandhiEquityScheme + ", interestOnSavingBankAccount=" + interestOnSavingBankAccount + "]";
 	}
 

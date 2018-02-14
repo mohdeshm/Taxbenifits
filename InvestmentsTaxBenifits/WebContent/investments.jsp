@@ -70,5 +70,11 @@
 			</tr>
 		</table>
 	</form:form>
+	
+	<form:form name="investments" action="investments.htm"
+		modelAttribute="taxBenifitInvestments" method="post">
+		<table bgcolor="#E4E47C" align="left" border="1">
+			<caption>Annual Investments</caption>
+			</table></form:form>
 </body>
 </html>
