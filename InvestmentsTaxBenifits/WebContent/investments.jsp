@@ -10,7 +10,7 @@
 <title>Salary</title>
 </head>
 <body>
-	<div ng-app="">
+<!-- 	<div ng-app=""> -->
 		<c:if test="${employeeSalary ne null }">
 			<form:form name="salaryBreakdown" action="salaryBreakdown.htm"
 				modelAttribute="employeeSalary" method="post">
@@ -19,63 +19,63 @@
 					<tr>
 						<td><form:label path="basic">Basic Salary</form:label></td>
 						<td><form:input path="basic" type="number"
-								required="required" maxlength="8" ng-model="basic"></form:input>
+								required="required" maxlength="8" ></form:input>
 							<form:errors path="basic"></form:errors></td>
 					</tr>
 					<tr>
 						<td><form:label path="houseRentAllowance">House Rent Allowance</form:label></td>
 						<td><form:input path="houseRentAllowance" type="number"
-								required="required" maxlength="8" ng-model="houseRentAllowance"></form:input>
+								required="required" maxlength="8" ></form:input>
 							<form:errors path="houseRentAllowance"></form:errors></td>
 					</tr>
 					<tr>
 						<td><form:label path="conveyanceAllowance">Conveyance Allowance</form:label></td>
 						<td><form:input path="conveyanceAllowance" type="number"
-								maxlength="8" ng-model="conveyanceAllowance"></form:input> <form:errors
+								maxlength="8" ></form:input> <form:errors
 								path="conveyanceAllowance"></form:errors></td>
 					</tr>
 					<tr>
 						<td><form:label path="otherReimbursementAllowance">Other Reimbursement Allowance</form:label></td>
 						<td><form:input path="otherReimbursementAllowance"
 								type="number" maxlength="8"
-								ng-model="otherReimbursementAllowance"></form:input> <form:errors
+								></form:input> <form:errors
 								path="otherReimbursementAllowance"></form:errors></td>
 					</tr>
 					<tr>
 						<td><form:label path="personalAllowance">Personal Allowance</form:label></td>
 						<td><form:input path="personalAllowance" type="number"
-								maxlength="8" ng-model="personalAllowance"></form:input> <form:errors
+								maxlength="8" ></form:input> <form:errors
 								path="personalAllowance"></form:errors></td>
 					</tr>
 					<tr>
 						<td><form:label path="statutoryBonus">Statutory Bonus</form:label></td>
 						<td><form:input path="statutoryBonus" type="number"
-								maxlength="8" ng-model="statutoryBonus"></form:input> <form:errors
+								maxlength="8" ></form:input> <form:errors
 								path="statutoryBonus"></form:errors></td>
 					</tr>
 					<tr>
 						<td><form:label path="capgeminiContributionPF">Capgemini's Contribution to PF</form:label></td>
 						<td><form:input path="capgeminiContributionPF" type="number"
 								required="required" maxlength="8"
-								ng-model="capgeminiContributionPF"></form:input> <form:errors
+								></form:input> <form:errors
 								path="capgeminiContributionPF"></form:errors></td>
 					</tr>
 					<tr>
 						<td><form:label path="gratuity">Gratuity</form:label></td>
 						<td><form:input path="gratuity" type="number"
-								required="required" maxlength="8" ng-model="gratuity"></form:input>
+								required="required" maxlength="8" ></form:input>
 							<form:errors path="gratuity"></form:errors></td>
 					</tr>
 					<tr>
 						<td><form:label path="medicalAccidentLifeInsurancePremium">Medical Accident Life Insurance Premium</form:label></td>
 						<td><form:input path="medicalAccidentLifeInsurancePremium"
 								type="number" required="required" maxlength="8"
-								ng-model="medicalAccidentLifeInsurancePremium"></form:input> <form:errors
+								></form:input> <form:errors
 								path="medicalAccidentLifeInsurancePremium"></form:errors></td>
 					</tr>
 					<tr>
 						<td>Total Salary</td>
-						<td>{{  (basic) + (houseRentAllowance) + (conveyanceAllowance) + (otherReimbursementAllowance) + (personalAllowance) + (statutoryBonus) + (capgeminiContributionPF) + (gratuity) + (medicalAccidentLifeInsurancePremium) }}</td>
+						<td>${totalSalary}</td>
 <!-- 						(houseRentAllowance) + (conveyanceAllowance) + (otherReimbursementAllowance) + (personalAllowance) + (statutoryBonus) + (capgeminiContributionPF) + (gratuity) + (medicalAccidentLifeInsurancePremium) -->
 					</tr>
 					<tr>
