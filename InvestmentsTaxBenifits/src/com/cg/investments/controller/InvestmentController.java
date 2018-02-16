@@ -18,6 +18,7 @@ public class InvestmentController {
 	@Autowired
 	InvestmentService service;
 	EmployeeSalary empSal=new EmployeeSalary();
+	TaxBenifitInvestments taxBenifitInvest= new TaxBenifitInvestments();
 	/**
 	 *
 	 * 
@@ -38,17 +39,18 @@ public class InvestmentController {
 	 */
 	@RequestMapping("/salaryBreakdown.htm")
 	public String storeSalaryDetails(Model model, @ModelAttribute("employeeSalary") EmployeeSalary employeeSalary) {
-		model.addAttribute("employeeSalary", employeeSalary);
-		model.addAttribute("taxBenifitInvestments", new TaxBenifitInvestments());
+		empSal=employeeSalary;
+		model.addAttribute("employeeSalary", empSal);
+		model.addAttribute("taxBenifitInvestments",taxBenifitInvest);
 		return "investments";
-
 	}
 
 	@RequestMapping(value = "/investments.htm", method = RequestMethod.POST)
 	public String login(Model model, @ModelAttribute("taxBenifitInvestments") TaxBenifitInvestments taxBenifitInvestments) {
+		taxBenifitInvest=taxBenifitInvestments;
 		double savings=service.calculateTotalTaxSaving(empSal, taxBenifitInvestments);
 		model.addAttribute("employeeSalary", empSal);
-		model.addAttribute("taxBenifitInvestments", taxBenifitInvestments);
+		model.addAttribute("taxBenifitInvestments", taxBenifitInvest);
 		model.addAttribute("savings",savings);
 		return "investments";
 	}
