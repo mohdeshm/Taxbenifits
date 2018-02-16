@@ -1,8 +1,11 @@
 package com.cg.investments.services;
 
+import org.springframework.stereotype.Service;
+
 import com.cg.investments.bean.EmployeeSalary;
 import com.cg.investments.bean.TaxBenifitInvestments;
 
+@Service
 public class InvestmentServiceImpl implements InvestmentService {
 	long taxBenifits;
 	long grossSalary;
@@ -24,7 +27,7 @@ public class InvestmentServiceImpl implements InvestmentService {
 				+ statutoryBonus + capgeminiContributionPF + gratuity + medicalAccidentLifeInsurancePremium;
 
 		houseRentAllowanceBenifit = employeeSalary.getHouseRentAllowance();
-		double min1 = taxBenifitInvestments.getHouseRentAllowance() - 0.1 * employeeSalary.getBasic();
+		double min1 = taxBenifitInvestments.getHouseRentPaid() - 0.1 * employeeSalary.getBasic();
 		double min2 = 0.4 * employeeSalary.getBasic();
 		double minimum = Math.min(min1, min2);
 		if (minimum < houseRentAllowanceBenifit) {

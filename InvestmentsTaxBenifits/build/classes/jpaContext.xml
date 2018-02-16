@@ -24,10 +24,11 @@
 	
 	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
           <property name="dataSource" ref="dataSource"/>
-          <property name="packagesToScan" value="com.cg.recruitment.entities"/>
+          <property name="packagesToScan" value="com.cg.investments.bean"/>
           <property name="persistenceProviderClass" value="org.hibernate.jpa.HibernatePersistenceProvider"/>
           <property name="jpaPropertyMap">
               <map>
+              		<entry key="javax.persistence.validation.mode" value="none"/>
                   <entry key="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>
                   <entry key="hibernate.hbm2ddl.auto" value="update"/>
               </map>

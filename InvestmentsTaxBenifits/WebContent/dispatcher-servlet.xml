@@ -12,6 +12,6 @@
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
-		p:prefix="/ui/" p:suffix=".jsp" />
+		p:prefix="/" p:suffix=".jsp" />
 
 </beans>

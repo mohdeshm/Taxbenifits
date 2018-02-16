@@ -1,6 +1,11 @@
 package com.cg.investments.bean;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class EmployeeSalary {
+	@Id
 	private long basic;
 	private long houseRentAllowance;
 	private long conveyanceAllowance;

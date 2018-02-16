@@ -1,6 +1,11 @@
 package com.cg.investments.bean;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class TaxBenifitInvestments {
+	@Id
 	private long houseRentPaid;
 	private long medicalInsurance;
 	private long infrastructureBonds;
@@ -13,11 +18,11 @@ public class TaxBenifitInvestments {
 		super();
 	}
 
-	public long getHouseRentAllowance() {
+	public long getHouseRentPaid() {
 		return houseRentPaid;
 	}
 
-	public void setHouseRentAllowance(long houseRentAllowance) {
+	public void setHouseRentPaid(long houseRentAllowance) {
 		this.houseRentPaid = houseRentAllowance;
 	}
 
